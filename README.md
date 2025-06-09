@@ -1,6 +1,11 @@
 # summer-chores
 Summary:
-A JavaScript file that uses callbacks to mark a chore list as complete in order without getting tired.
+Two versions of a JavaScript file that checks if a person can complete their chore list without falling asleep.
+
+(callbackVersion.js uses callbacks to achieve this)
+(promiseVersion.js uses promises to achieve this)
+ 
+
 
 |     Chore    | Time to Complete |
 |--------------|------------------|

@@ -1,5 +1,8 @@
 // person's name
-const person = "Person"
+const person = "Homer"
+
+// random number
+let randomNum = Math.floor(Math.random() * 100);
 
 // call function
 doSummerChores()
@@ -17,7 +20,7 @@ function weedEat(callback) {
      setTimeout(function() {
         console.log(person + " weedeated the around the house and fence.")
         callback();
-    }, 2000);   
+    }, 1500);   
 }
 
 //  hedge trimming
@@ -25,7 +28,7 @@ function trimHedges(callback) {
     setTimeout(function() {
         console.log(person + " trimmed the hedges.")
         callback();
-    }, 2000);
+    }, 1000);
 }
 
 // collect wood
@@ -33,7 +36,7 @@ function collectWood(callback) {
     setTimeout(function() {
         console.log(person + " collected firewood.")
         callback();
-    }, 2000);
+    }, 2500);
 }
 
 // water garden
@@ -41,20 +44,25 @@ function waterGarden(callback) {
     setTimeout(function() {
         console.log(person + " watered the garden.")
         callback();
-    }, 2000);
+    }, 500);
 }
 
 //
 function doSummerChores() {
-    mowYard(() => {
-        weedEat(() => {
-            trimHedges(() => {
-                collectWood(() => {
-                    waterGarden(() => {
-                        console.log(person + " finished all their chores!")
+    if (randomNum % 5 === 0) {
+        mowYard(() => {
+            weedEat(() => {
+                trimHedges(() => {
+                    collectWood(() => {
+                        waterGarden(() => {
+                            console.log(person + " finished all their chores!")
+                        });
                     });
                 });
             });
         });
-    });
+    }
+    else {
+        console.log(person + " fell asleep...");
+    }
 }
