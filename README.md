@@ -3,7 +3,10 @@ Summary:
 Two versions of a JavaScript file that checks if a person can complete their chore list without falling asleep.
 
 (callbackVersion.js uses callbacks to achieve this)
+
 (promiseVersion.js uses promises to achieve this)
+
+(asyncAwaitVersion.js uses "async" and "await" to achieve this)
  
 
 
